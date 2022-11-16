@@ -154,6 +154,7 @@ nav{
     align-items: center;
     overflow: hidden;
     margin-left: 0.25vw;
+    margin-bottom: 0;
 }
 
 #box_category img{
