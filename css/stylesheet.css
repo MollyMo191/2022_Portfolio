@@ -1,0 +1,452 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #081B23;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* NAVIGATION BAR */
+
+.Sidebar_Container{
+    height: 100vh;
+    width: 12vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 0 1vw black;
+    background-image: linear-gradient(#142A35,#081B23);
+}
+
+.Sidebar{
+    z-index: 100;
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    float: left;
+    bottom: 3%;
+}
+
+.Sidebar img{
+    width: 1.5vw;
+    position: relative;
+    float: left;
+    margin-right: 0.75vw;
+    opacity: 25%;
+    padding-top: 1vh;
+    padding-bottom: 1.5vh;
+}
+
+.PageLogo{
+    z-index: 100;
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    float: left;
+    padding-top: 4vh;
+}
+
+.PageLogo img{
+    width: 80%;
+    height: auto;
+}
+
+nav{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 200;
+    line-height: 50%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.hover-underline-animation{
+    position: relative;
+}
+
+.hover-underline-animation:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.hover-underline-animation:hover:before{
+    visibility: visible;
+    width: 100%;
+}
+
+.Sidebar_Container a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.Sidebar_Container a:visited{
+    color: white;
+}
+
+.Sidebar_Container a:hover{
+    text-decoration: none;
+}
+
+#CurrentPage{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESIGN HOME PAGE */
+
+.Image_Gallery{
+    height: auto;
+    width: 86vw;
+    position: relative;
+    margin-left: 14.75vw;
+    z-index: 3;
+    animation: fadein ease-in 0.75s;
+    overflow: hidden;
+    background-color: white;
+}
+
+@keyframes fadein{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.row {
+    position: relative;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#box_category{
+    height: 100vh;
+    width: 28.25vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 0.25vw;
+}
+
+#box_category img{
+    height: fill;
+    width: auto;
+    flex-shrink: 0;
+}
+
+/* HOVER OVERLAY */
+
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff00;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+    padding-left: 2vw;
+	justify-content: center;
+	opacity: 100;
+	transition: opacity 0.25s;
+    backdrop-filter: grayscale(100%);
+}
+
+.image__overlay--primary {
+	background: #0000004b;
+}
+
+.image__overlay>* {
+	transform: translateY(10px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+    backdrop-filter: blur(3px) grayscale(0%);
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 1.5vw;
+	font-weight: 500;
+}
+
+.image__description {
+	font-size: 0.75vw;
+	margin-top: 0.25em;
+}
+
+
+
+
+/* DESIGN CONTENT PAGE */
+
+.Image_Gallery_Content_Page{
+    height: auto;
+    width: 86vw;
+    position: relative;
+    margin-left: 14.75vw;
+    z-index: 3;
+    animation: fadein ease-in 0.75s;
+    overflow: hidden;
+    background-color: white;
+}
+
+@keyframes fadein{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.row {
+    position: relative;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.box{
+    height: 50vh;
+    width: 21.15vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 0.25vw;
+    margin-bottom: 0.25vw;
+}
+
+#bottom_row{
+    margin-bottom: 0;
+}
+
+.box img{
+    height: fill;
+    width: auto;
+    flex-shrink: 0;
+}
+
+/* HOVER OVERLAY */
+
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff00;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+    padding-left: 2vw;
+	justify-content: center;
+	opacity: 100;
+	transition: opacity 0.25s;
+    backdrop-filter: grayscale(100%);
+}
+
+.image__overlay--primary {
+	background: #0000004b;
+}
+
+.image__overlay>* {
+	transform: translateY(10px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+    backdrop-filter: blur(3px) grayscale(0%);
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 1.5vw;
+	font-weight: 500;
+}
+
+.image__description {
+	font-size: 0.75vw;
+	margin-top: 0.25em;
+}
+
+
+
+/* PROJECT DESCRIPTION */
+
+.project_description_box{
+    background-color: white;
+    position: absolute;
+    position: fixed;
+    height: 100vh;
+    width: 22vw;
+    margin-left: 63.5vw;
+    z-index: 6;
+    box-shadow: 0 0 1vw black;
+}
+
+.description_total{
+    padding-left: 2vw;
+    padding-right: 2.15vw;
+}
+
+.back_arrow{
+    position: relative;
+    font-family: 'ivypresto-headline', serif;
+    font-weight: 600;
+    font-size: 2vw;
+    text-decoration: none;
+    color: #D8C2A7;
+    transition: color 0.25s;
+}
+
+.back_arrow:hover{
+    color: black;
+}
+
+.project_title{
+    padding-top: 8vh;
+    font-family: 'ivypresto-headline', serif;
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+.project_title_with_arrow{
+    padding-top: 3.5vh;
+    font-family: 'ivypresto-headline', serif;
+    font-weight: 600;
+    font-size: 2vw;
+    line-height: 5vh;
+}
+
+.description_large{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.85vw;
+    padding-top: 6vh;
+}
+
+
+/* CONTENT BOXES */
+
+.Image_Gallery_Content_Page{
+    height: auto;
+    width: 86vw;
+    position: relative;
+    margin-left: 14.75vw;
+    z-index: 3;
+    animation: fadein ease-in 0.75s;
+    overflow: hidden;
+    background-color: white;
+}
+
+@keyframes fadein{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.row {
+    position: relative;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.box_page{
+    height: 50vh;
+    width: 31.5vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 0.25vw;
+    margin-bottom: 0.25vw;
+}
+
+#bottom_row{
+    margin-bottom: 0;
+}
+
+.box_page img{
+    height: fill;
+    width: auto;
+    flex-shrink: 0;
+}
+
+
+/* ABOUT   EFD8BD  */
+
+.box_page_about{
+    height: 100vh;
+    width: 58vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #C2C677;
+}
+
+.box_page_about img{
+    height: auto;
+    width: 48vw;
+    padding-top: 5vh;
+}
+
+.project_description_box_about{
+    background-color: white;
+     position: absolute;
+     position: fixed;
+     height: 100vh;
+     width: 28vw;
+     margin-left: 58vw;
+     z-index: 6;
+     box-shadow: 0 0 1vw black;
+ }
